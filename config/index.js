@@ -11,18 +11,18 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/api': {    
-          target: 'http://127.0.0.1:9998',  // 接口域名
-          // secure: false,  // 如果是https接口，需要配置这个参数
-          changeOrigin: true,  //是否跨域
-          pathRewrite: {
-              '^/apis': ''   //需要rewrite的,
-          }              
-        }
+        // '/api': {    
+        //   target: 'http://192.168.3.245:9998/routes',  // 接口域名
+        //   secure: false,  // 如果是https接口，需要配置这个参数
+        //   changeOrigin: true,  //是否跨域
+        //   pathRewrite: {
+        //       '^/apis': ''   //需要rewrite的,
+        //   }              
+        // }
     },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: '127.0.0.1', // can be overwritten by process.env.HOST
     port: 3000, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

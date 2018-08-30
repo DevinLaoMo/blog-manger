@@ -15,6 +15,20 @@ export default {
   data () {
     return {
     }
+  },
+  created () {
+    this.login()
+  },
+  methods: {
+    login () {
+      let params = {
+        userId: 'xiaohua',
+        passWord: '123456'
+      }
+      this.$axios.post('/user_personal/login', params).then(data => {
+        console.log(data)
+      })
+    }
   }
 }
 </script>
@@ -52,7 +66,7 @@ export default {
                 border-radius:2px;
                 border:1px solid #bdacaa71;
                 opacity: 0.4;
-                color:#cfcacf;
+                color:#eee;
                 text-indent: 5px;
                 font-size:12px;
             }

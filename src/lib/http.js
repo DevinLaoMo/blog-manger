@@ -31,9 +31,9 @@ axios.create({
 // http://dazhi.vipgz1.idcfengye.com
 // http://wxwl.vipgz1.idcfengye.com
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'api'
+  baseURL = 'http://127.0.0.1:9998/routes'
 } else if (process.env.NODE_ENV === 'production') {
-  baseURL = 'http://lixiaohua.net:9998'
+  baseURL = 'http://127.0.0.1:9998/routes'
 }
 axios.defaults.baseURL = baseURL
 
