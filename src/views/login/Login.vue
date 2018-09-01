@@ -18,14 +18,28 @@ export default {
   },
   created () {
     this.login()
+    setTimeout(() => {
+      this.ceshi()
+    }, 1000)
   },
   methods: {
     login () {
       let params = {
-        userId: 'xiaohua',
+        userId: 'xiaoming',
         passWord: '123456'
       }
       this.$axios.post('/user_personal/login', params).then(data => {
+        console.log(data)
+        localStorage.setItem('token', data.data.token)
+      })
+    },
+    ceshi () {
+      const token = localStorage.getItem('token')
+      let params = {
+        userId: 'xiaohuay',
+        loginedtoken: token
+      }
+      this.$axios.post('/user_personal/ceshi', params).then(data => {
         console.log(data)
       })
     }
